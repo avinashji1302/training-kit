@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # Ruby-specific steps
+    # Ruby-Specific Steps
     - name: Set up Ruby 2.6
       uses: actions/setup-ruby@v1
       with:
@@ -21,12 +21,12 @@ jobs:
         bundle install --jobs 4 --retry 3
         bundle exec rake
 
-    # Node-specific steps
+    # Node-Specific Steps
     - name: Install node modules
       run: |
         npm install
 
-    # Jekyll-specific steps
+    # Jekyll-Specific Steps
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
